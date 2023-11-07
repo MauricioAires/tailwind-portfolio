@@ -2,7 +2,11 @@
 
 ## Sobre o projeto
 
-Tailwind CSS
+Primeira versão do meu portfólio desenvolvido com TailwindCSS, React e Radix UI
+
+Apresento a primeira versão do meu portfólio, desenvolvido com TailwindCSS, React e Radix UI. O projeto foi construído com um design responsivo e adaptável a qualquer dispositivo.
+
+O portfólio apresenta uma visão geral da minha experiência profissional e acadêmica, bem como uma seleção dos meus projetos mais relevantes.
 
 ## Tecnologias
 
@@ -13,7 +17,6 @@ Tailwind CSS
 - [Auto Animate](https://auto-animate.formkit.com/)
 - [Tiptap](https://tiptap.dev/)
 - [Transform Tools](https://transform.tools/)
-
 
 ## Instalação
 
