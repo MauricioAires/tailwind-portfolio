@@ -19,14 +19,17 @@ export function TabItem({ title, isSelected = false }: TabItemProps) {
       ])}
       value={title}
     >
-      <span className="font-fira-code whitespace-nowrap rounded group-focus-visible:ring-2  group-focus-visible:ring-violet-400  group-focus-visible:ring-offset-4">
+      <span className="whitespace-nowrap rounded font-fira-code group-focus-visible:ring-2  group-focus-visible:ring-violet-400  group-focus-visible:ring-offset-4">
         {title}
       </span>
 
       {isSelected && (
         <motion.div
           layoutId="active-tab"
-          className="absolute  -left-px top-0 h-full w-0.5  dark:bg-airs-green"
+          className={twMerge([
+            'absolute -bottom-1 left-0 h-0.5 w-full  dark:bg-airs-green',
+            'lg:-left-px lg:top-0 lg:h-full lg:w-0.5',
+          ])}
         />
       )}
     </RTabs.Trigger>

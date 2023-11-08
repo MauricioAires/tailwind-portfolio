@@ -6,6 +6,7 @@ import { useState } from 'react'
 import { Play } from 'lucide-react'
 import { formatDistanceStrict } from 'date-fns'
 import ptBr from 'date-fns/locale/pt-BR'
+import { twMerge } from 'tailwind-merge'
 
 export function Experiences() {
   const [currentTab, setCurrentTab] = useState<string>('DCB Company')
@@ -28,7 +29,12 @@ export function Experiences() {
       className="flex flex-col lg:flex-row"
       orientation="vertical"
     >
-      <Tabs.TabsList className="w-100 mt-6 flex flex-col items-start gap-2  border-l-2 dark:border-airs-light-navy ">
+      <Tabs.TabsList
+        className={twMerge([
+          'w-100 mt-6 flex flex-row items-start gap-2  border-b-2 border-airs-light-navy  ',
+          'lg:flex-col lg:border-l-2 ',
+        ])}
+      >
         <TabItem
           isSelected={currentTab === 'DCB Company'}
           title="DCB Company"
@@ -36,7 +42,7 @@ export function Experiences() {
         <TabItem isSelected={currentTab === 'Brisanet'} title="Brisanet" />
         <TabItem isSelected={currentTab === 'Evocorp'} title="Evocorp" />
       </Tabs.TabsList>
-      <div className="ml-10 flex-1">
+      <div className="flex-1 p-10">
         <Tabs.Content value="DCB Company" className="w-full">
           <a
             target="_blank"
