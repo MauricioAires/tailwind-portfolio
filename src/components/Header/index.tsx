@@ -23,6 +23,25 @@ export function Sidebar() {
   const openMenu = () => {
     setState(true)
   }
+
+  document.addEventListener('keydown', function (event) {
+    console.log(`Key: ${event.key} with keycode ${event.key} has been pressed`)
+
+    switch (event.key) {
+      case '1':
+        this.location.href = '/#sobre'
+        return
+      case '2':
+        this.location.href = '/#experiencias'
+        return
+      case '3':
+        this.location.href = '/#projetos'
+        return
+      case '4':
+        this.location.href = '/#contato'
+    }
+  })
+
   return (
     <>
       <header className="sticky top-0 z-20 hidden h-20 w-full items-center justify-between overflow-hidden bg-airs-navy px-10 md:flex">
@@ -115,6 +134,3 @@ export function MenuItem({ index, href, title }: MenuItemProps) {
     </a>
   )
 }
-
-// Adicionar um contexto para fechar o menu quando seleiconar um item
-// e quando clicar no backdorp

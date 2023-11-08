@@ -4,8 +4,8 @@ import * as Tabs from '@radix-ui/react-tabs'
 import { TabItem } from './TabItem'
 import { useState } from 'react'
 import { Play } from 'lucide-react'
-import { formatDistanceStrict } from 'date-fns'
-import ptBr from 'date-fns/locale/pt-BR'
+// import { formatDistanceStrict } from 'date-fns'
+// import ptBr from 'date-fns/locale/pt-BR'
 import { twMerge } from 'tailwind-merge'
 
 export function Experiences() {
