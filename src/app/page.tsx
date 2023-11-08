@@ -1,8 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { Experiences } from '@/components/Experiences'
-import { FeaturedProject } from '@/components/FeaturedProject'
 import { Sidebar } from '@/components/Header'
-import { Projects } from '@/components/Projects'
 import { SessionAbout } from '@/components/SessionAbout'
 import { SessionContact } from '@/components/SessionContact'
 import { SessionExperiences } from '@/components/SessionExperiences'

@@ -3,7 +3,7 @@
 
 import { Menu, X } from 'lucide-react'
 import * as PrimitiveCollapsible from '@radix-ui/react-collapsible'
-import { createContext, useContext, useState } from 'react'
+import { createContext, useContext, useEffect, useState } from 'react'
 
 interface SidebarContextData {
   closeMenu: () => void
@@ -24,23 +24,35 @@ export function Sidebar() {
     setState(true)
   }
 
-  document.addEventListener('keydown', function (event) {
-    console.log(`Key: ${event.key} with keycode ${event.key} has been pressed`)
-
-    switch (event.key) {
-      case '1':
-        this.location.href = '/#sobre'
-        return
-      case '2':
-        this.location.href = '/#experiencias'
-        return
-      case '3':
-        this.location.href = '/#projetos'
-        return
-      case '4':
-        this.location.href = '/#contato'
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      console.log(
+        '\n%c \ud83d\udc40 \n%c Oi! Al\u00e9m de dar uma olhadinha no meu console, que tal dar uma passadinha pra ver meu Linkedin e Github? \n%c Linkedin: https://www.linkedin.com/in/mauricioairs/ \n%c Github:https://github.com/MauricioAires \n',
+        'font-family: sans-serif;font-weight: bold; font-size: 50px; text-shadow: 3px 3px 0 red; text-shadow: 3px 3px 0 #f28000, 6px 6px 0 #8ce563',
+        'font-size: 16px;color: #f28000;',
+        'font-size: 14px;color: #00c8ff;',
+        'font-size: 14px;color: #ac63ff;',
+      )
     }
-  })
+  }, [])
+
+  if (typeof window !== 'undefined') {
+    document.addEventListener('keydown', function (event) {
+      switch (event.key) {
+        case '1':
+          this.location.href = '/#sobre'
+          return
+        case '2':
+          this.location.href = '/#experiencias'
+          return
+        case '3':
+          this.location.href = '/#projetos'
+          return
+        case '4':
+          this.location.href = '/#contato'
+      }
+    })
+  }
 
   return (
     <>

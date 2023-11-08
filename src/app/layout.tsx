@@ -20,8 +20,8 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg" sizes="32x32" />
       </head>
-      <body className={`${firaCode.variable} ${inter.variable}`}>
-        <main className=" flex min-h-screen max-w-[100vw]  flex-col items-center font-inter text-airs-slate dark:bg-airs-navy">
+      <body className={`${firaCode.variable} ${inter.variable} bg-airs-navy`}>
+        <main className=" flex min-h-screen max-w-[100vw]  flex-col items-center bg-airs-navy font-inter text-airs-slate">
           {children}
         </main>
         <Analytics />
