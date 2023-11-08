@@ -10,7 +10,7 @@ import { twMerge } from 'tailwind-merge'
 export default function Home() {
   return (
     <>
-      <header className="sticky top-0 z-20 hidden h-20 w-full max-w-[100%] items-center justify-between overflow-hidden bg-airs-navy px-10  text-zinc-300 md:flex">
+      <header className="sticky top-0 z-20 hidden h-20 w-full items-center justify-between overflow-hidden bg-airs-navy px-10 md:flex">
         <span>
           <a href="#hero">
             <img className="w-28" src="/ares.png" alt="Logo Ares" />
@@ -37,7 +37,7 @@ export default function Home() {
         </nav>
       </header>
 
-      {/* <Sidebar /> */}
+      <Sidebar />
 
       <div
         aria-orientation="vertical"
@@ -67,7 +67,7 @@ export default function Home() {
         </ul>
       </div>
 
-      <div className="max-w-[1600px]">
+      <div className="flex max-w-[1600px] flex-col items-center">
         <section id="hero" className="flex flex-col px-10 pt-24 md:px-24">
           <h1 className="mb-7 font-fira-code text-base text-airs-green  md:text-lg">
             Oi, meu nome é
@@ -141,7 +141,12 @@ export default function Home() {
                 software de alta qualidade.
               </p>
 
-              <ul className="grid-cols-highlight-skills grid gap-4 font-fira-code text-base">
+              <ul
+                className={twMerge([
+                  'grid gap-4 font-fira-code text-base',
+                  'grid-cols-highlight-skills',
+                ])}
+              >
                 <li className="flex items-center gap-1">
                   <SparkleIcon className="h-4 w-4 text-airs-green" />
                   React.js
@@ -168,16 +173,16 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <div className="group relative flex min-h-[22vh] min-w-[22vw] cursor-pointer items-center justify-center">
-              <div className="relative z-10 h-full w-full overflow-hidden rounded-md">
+            <div className="group relative flex min-h-[22vh] min-w-[22vw] max-w-[80vw] cursor-pointer items-center justify-center">
+              <div className="z-10 h-full w-full overflow-hidden rounded-md shadow-md   transition-all duration-300 group-hover:-ml-3 group-hover:-mt-3">
                 <img
                   src="https://github.com/MauricioAires.png"
                   alt="Mauricio Aires"
-                  className="flex-1"
+                  className="flex-1 object-cover"
                 />
               </div>
               <div
-                className="absolute -bottom-5 -right-5 h-full w-full border-spacing-2 rounded-md border-2 border-airs-green  text-airs-green transition-all group-hover:-bottom-3 group-hover:-right-3"
+                className="absolute -bottom-3 -right-3 h-full w-full border-spacing-2 rounded-md border-2 border-airs-green text-airs-green  transition-all duration-300 group-hover:-bottom-5 group-hover:-right-5"
                 about="border"
               />
             </div>
@@ -286,7 +291,7 @@ export default function Home() {
           </a>
         </section>
 
-        <footer className="flex flex-col items-center justify-center py-7">
+        <footer className="mt-40 flex  flex-col items-center justify-center px-10  pt-24 md:px-24">
           <ul className="flex md:hidden">
             <SocialMedia />
           </ul>
