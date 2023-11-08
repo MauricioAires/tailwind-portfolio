@@ -2,7 +2,6 @@
 
 import { ExternalLinkIcon, Folder, GithubIcon } from 'lucide-react'
 import { useEffect, useState } from 'react'
-import { mock } from './mock'
 
 interface Project {
   id: string
