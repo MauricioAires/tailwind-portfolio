@@ -53,6 +53,7 @@ const config: Config = {
       gridTemplateColumns: {
         projects: 'repeat(auto-fill, minmax(350px, 1fr))',
         'featured-project': 'repeat(12, 1fr)',
+        'highlight-skills': 'repeat(2, minmax(140px , 200px))',
       },
       gridRow: {
         'span-1-1': '1 / -1',

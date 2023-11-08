@@ -141,7 +141,7 @@ export default function Home() {
                 software de alta qualidade.
               </p>
 
-              <ul className="flex flex-col gap-2 font-fira-code text-sm ">
+              <ul className="grid-cols-highlight-skills grid gap-4 font-fira-code text-base">
                 <li className="flex items-center gap-1">
                   <SparkleIcon className="h-4 w-4 text-airs-green" />
                   React.js
@@ -161,6 +161,10 @@ export default function Home() {
                 <li className="flex items-center gap-1">
                   <SparkleIcon className="h-4 w-4 text-airs-green" />
                   JavaScript (ES6+)
+                </li>
+                <li className="flex items-center gap-1">
+                  <SparkleIcon className="h-4 w-4 text-airs-green" />
+                  GraphQL
                 </li>
               </ul>
             </div>
