@@ -11,16 +11,16 @@ import { twMerge } from 'tailwind-merge'
 export function Experiences() {
   const [currentTab, setCurrentTab] = useState<string>('DCB Company')
 
-  function calculateCompanyTime(dateStart: string, dateEnd?: string) {
-    return formatDistanceStrict(
-      new Date(dateStart),
-      new Date(dateEnd ?? new Date()),
-      {
-        locale: ptBr,
-        roundingMethod: 'round',
-      },
-    )
-  }
+  // function calculateCompanyTime(dateStart: string, dateEnd?: string) {
+  //   return formatDistanceStrict(
+  //     new Date(dateStart),
+  //     new Date(dateEnd ?? new Date()),
+  //     {
+  //       locale: ptBr,
+  //       roundingMethod: 'round',
+  //     },
+  //   )
+  // }
 
   return (
     <Tabs.Root
@@ -52,7 +52,7 @@ export function Experiences() {
             @DBC Company
           </a>
           <p className="mb-10 text-airs-white">
-            Tempo integral • {calculateCompanyTime('11-01-2022')}
+            {/* Tempo integral • {calculateCompanyTime('11-01-2022')} */}
           </p>
 
           <ul className="flex flex-col gap-5">
@@ -111,7 +111,7 @@ export function Experiences() {
             @Brisanet
           </a>
           <p className="mb-10 text-airs-white">
-            Tempo integral • {calculateCompanyTime('08-01-2019', '11-01-2022')}
+            {/* Tempo integral • {calculateCompanyTime('08-01-2019', '11-01-2022')} */}
           </p>
 
           <ul className="flex flex-col gap-5">
@@ -174,7 +174,7 @@ export function Experiences() {
             @EVOCORP
           </a>
           <p className="mb-10 text-airs-white">
-            Estágio • {calculateCompanyTime('07-01-2018', '12-01-2018')}
+            {/* Estágio • {calculateCompanyTime('07-01-2018', '12-01-2018')} */}
           </p>
 
           <ul className="flex flex-col gap-5">
