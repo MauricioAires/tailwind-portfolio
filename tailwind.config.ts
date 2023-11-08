@@ -47,8 +47,20 @@ const config: Config = {
         slideDownAndFade: 'slideDownAndFade 1s alternate infinite',
       },
 
+      gridTemplateRows: {
+        'featured-project': 'repeat(6, 1fr)',
+      },
       gridTemplateColumns: {
         projects: 'repeat(auto-fill, minmax(350px, 1fr))',
+        'featured-project': 'repeat(12, 1fr)',
+      },
+      gridRow: {
+        'span-1-1': '1 / -1',
+      },
+      gridColumn: {
+        'span-1-7': '1 / 7',
+        'span-6-1': '6 / -1',
+        'span-1-1': '1 / -1',
       },
     },
   },
