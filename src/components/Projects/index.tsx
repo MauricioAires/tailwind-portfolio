@@ -39,9 +39,9 @@ export function Projects() {
   }, [])
 
   return (
-    <section className="mt-40 flex flex-col items-center px-10  pt-24 md:px-24">
+    <section className="mt-40 flex flex-col items-center px-8 pt-24 md:px-24">
       <div className="mb-10 flex flex-col items-center gap-2">
-        <h2 className="text-3xl  font-bold text-airs-lightest-slate">
+        <h2 className="text-3xl font-bold text-airs-lightest-slate">
           Outros projetos
         </h2>
 

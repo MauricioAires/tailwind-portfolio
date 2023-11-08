@@ -51,7 +51,7 @@ const config: Config = {
         'featured-project': 'repeat(6, 1fr)',
       },
       gridTemplateColumns: {
-        projects: 'repeat(auto-fill, minmax(350px, 1fr))',
+        projects: 'repeat(auto-fill, minmax(20rem, 1fr))',
         'featured-project': 'repeat(12, 1fr)',
         'highlight-skills': 'repeat(2, minmax(140px , 200px))',
       },

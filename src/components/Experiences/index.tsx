@@ -42,7 +42,7 @@ export function Experiences() {
         <TabItem isSelected={currentTab === 'Brisanet'} title="Brisanet" />
         <TabItem isSelected={currentTab === 'Evocorp'} title="Evocorp" />
       </Tabs.TabsList>
-      <div className="flex-1 p-10">
+      <div className="flex-1  p-6 md:p-10">
         <Tabs.Content value="DCB Company" className="w-full">
           <a
             target="_blank"

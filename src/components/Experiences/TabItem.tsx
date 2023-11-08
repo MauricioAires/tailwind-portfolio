@@ -14,7 +14,7 @@ export function TabItem({ title, isSelected = false }: TabItemProps) {
     <RTabs.Trigger
       className={twMerge([
         'max-h-16 w-full  dark:text-airs-lightest-slate dark:hover:bg-airs-light-navy  dark:hover:text-airs-green',
-        'group relative flex flex-1 items-center justify-center px-5 py-5  text-sm font-medium outline-none lg:justify-start ',
+        'group relative flex flex-1 items-center justify-center px-3 py-5 text-sm  font-medium outline-none md:px-5 lg:justify-start ',
         'transition-colors data-[state=active]:text-airs-green dark:data-[state=active]:bg-airs-light-navy  dark:data-[state=active]:text-airs-green',
       ])}
       value={title}
