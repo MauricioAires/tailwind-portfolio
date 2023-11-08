@@ -3,9 +3,8 @@
 import { ExternalLinkIcon, Folder, GithubIcon } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
-import { data } from './data'
 interface Project {
-  id: number
+  id: string
   name: string
   description: string
   topics: string[]
@@ -17,43 +16,26 @@ interface Project {
 export function Projects() {
   const [projects, setProjects] = useState<Project[]>([])
   useEffect(() => {
-    // fetch(
-    //   'https://api.github.com/users/MauricioAires/repos?per_page=9&sort=author-date-asc',
-    // )
-    //   .then((response) => response.json())
-    //   .then((data: Project[]) => {
-    //     setProjects(
-    //       data.map((project) => {
-    //         const d = project.description?.split(' ').splice(0, 20)
+    fetch(
+      'https://api.github.com/users/MauricioAires/repos?per_page=9&sort=author-date-asc',
+    )
+      .then((response) => response.json())
+      .then((data: Project[]) => {
+        setProjects(
+          data.map((project) => {
+            const d = project.description?.split(' ').splice(0, 20)
 
-    //         return {
-    //           ...project,
-    //           topics_count:
-    //             project.topics.length > 3 ? project.topics.length - 3 : 0,
-    //           topics: project.topics.splice(0, 3),
-    //           name: project.name.replace(/-/g, ' '),
-    //           description: d?.join('  '),
-    //         }
-    //       }),
-    //     )
-    //   })
-    const mockData: Project[] = data.map((project) => {
-      const d = project.description?.split(' ').splice(0, 20)
-
-      const formatted = {
-        id: project.id,
-        html_url: project.html_url,
-        homepage: project.homepage,
-        topics_count: project.topics.length > 3 ? project.topics.length - 3 : 0,
-        topics: project.topics.splice(0, 3),
-        name: project.name.replace(/-/g, ' '),
-        description: d?.join('  '),
-      } as Project
-
-      return formatted
-    })
-
-    setProjects(mockData)
+            return {
+              ...project,
+              topics_count:
+                project.topics.length > 3 ? project.topics.length - 3 : 0,
+              topics: project.topics.splice(0, 3),
+              name: project.name.replace(/-/g, ' '),
+              description: d?.join('  '),
+            }
+          }),
+        )
+      })
   }, [])
 
   return (
