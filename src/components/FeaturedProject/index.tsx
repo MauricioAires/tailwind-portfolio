@@ -18,21 +18,22 @@ export function FeaturedProject({
   deployUrl,
   repositoryUrl,
   usedTechnologies,
-  direction,
   coverUrl,
 }: FeaturedProjectProps) {
   return (
     <div className="mx-auto">
       <div
         className={twMerge([
-          'grid-cols-featured-project grid-rows-featured-project m-7 grid  items-start gap-3',
-          'lg:items-center ',
+          'm-7 grid  items-start gap-3',
+          'lg:items-center',
+          'grid-cols-featured-project grid-rows-featured-project',
         ])}
       >
         <div
           className={twMerge([
-            'col-span-1-1 row-span-1-1 relative z-10  grid p-10',
-            'lg:col-span-1-7  lg:p-0 ',
+            'relative z-10  grid p-10',
+            'lg:col-span-1-7  lg:p-0',
+            'col-span-1-1 row-span-1-1',
           ])}
         >
           <p className="my-3 font-fira-code text-sm text-airs-green">
@@ -88,9 +89,10 @@ export function FeaturedProject({
             backgroundColor: 'linear-gradient(0.4turn, #64ffda, #64ff8d)',
           }}
           className={twMerge([
-            'col-span-1-1 row-span-1-1 relative grid h-full w-auto   overflow-hidden rounded-md  bg-airs-green  opacity-20',
+            'relative grid h-full w-auto   overflow-hidden rounded-md  bg-airs-green  opacity-20',
             'lg:col-span-6-1  lg:opacity-100',
             'before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:h-full before:w-full before:rounded-md before:bg-[#0a192f] before:mix-blend-screen',
+            'col-span-1-1 row-span-1-1',
           ])}
         >
           <a href={deployUrl} target="_blank">
